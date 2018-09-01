@@ -1,0 +1,17 @@
+.pagination {
+
+}
+
+.pagination > a {
+    display: inline-block;
+    color: #666;
+    background: #eee;
+    padding: 6px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pagination > a:hover,
+.pagination > a.active {
+    background: #333;
+    color: #fff;
+}

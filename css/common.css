@@ -1,0 +1,151 @@
+/*
+* @Author: 有猫的程序员
+* @Date:   2018-08-09 15:32:45
+* @Last Modified by:   有猫的程序员
+* @Last Modified time: 2018-08-14 17:21:07
+*/
+
+
+/*================== 公共样式 ==================*/
+
+/* 盒模型 */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* 清除浮动 */
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: '\200B';
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+/* 链接样式 */
+
+a {
+    color: #5c9fd8;
+    transition: color .3s linear;
+    -webkit-transition: color .3s linear;
+}
+
+a:visited {}
+
+a:hover {
+    color: #ffc601;
+    text-decoration: none;
+}
+
+a:active {}
+
+/* 文字超出显示省略号 */
+
+.text-overflow {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+/* 背景色 */
+
+.bg-primary {
+    background-color: #FD5157;
+}
+.bg-secondary {
+    background-color: #EE804A;
+}
+.bg-info {
+    background-color: #F2AA64;
+}
+.bg-red {
+    background-color: red;
+}
+
+
+/*================== 首页样式 ==================*/
+
+/* 头部 */
+
+header {
+    height: 60px;
+    color: #fff;
+    background: #555;
+    text-align: center;
+}
+
+header h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 60px;
+    color: #fff;
+}
+
+header h1 a {
+    color: inherit;
+}
+
+/* 主体 */
+.page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page li {
+    border-bottom: 1px dotted #ddd;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.page a {
+    display: block;
+    padding: 10px;
+}
+
+.page a:hover {
+    color: orange;
+}
+
+/* 常用面板 */
+
+.pannel {
+    border: 1px solid #eee;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05); /* 阴影 */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.pannel .pannel-title {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.pannel .pannel-title h2 {
+    font-size: 18px;
+}
+
+.pannel .pannel-body {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.pannel .pannel-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    min-height: 50px;
+}

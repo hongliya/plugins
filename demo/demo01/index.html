@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jquery</title>
+    <link rel="stylesheet" href="../../css/reset.min.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="pagination.css" />
+</head>
+
+<body>
+    <header>
+        <h1>jquery ajax 分页插件</h1>
+    </header>
+    <div class="page">
+        <ul class="listWrapper">
+
+        </ul>
+
+        <div class="pagination"></div>
+        <!-- <div class="pagination"></div> -->
+    </div>
+
+    <script src="../../lib/jquery-3.3.1.min.js"></script>
+    <script src="jquery.pagebar.js"></script>
+    <script>
+        $(function() {
+            $('.pagination').pagebar({
+                remote: {
+                    url: 'data.json',
+                    type: 'GET',
+                    data: {
+                        page: 1
+                    },
+                    success: function(json) {
+                        var str = '';
+                        var datas = json.list;
+                        for (var i = 0; i < datas.length; i++) {
+                            str += '<li>'
+                                + '<a href="#">'+ datas[i].title +'</a>'
+                            + '</li>';
+                        }
+                        $('.listWrapper').empty().html(str);
+                    }
+                },
+                callback: function(index) {
+                    console.log(index)
+                }
+            });
+        });
+    </script>
+</body>
+</html>
