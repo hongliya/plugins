@@ -49,6 +49,7 @@
 .gallery-wrapper .gallery .gallery-t {
     display: table-cell;
     vertical-align: middle;
+    overflow: hidden;
 }
 .gallery-wrapper .gallery .gallery-t img {
     max-width: 100%;
@@ -80,6 +81,7 @@
     font-size: 44px;
     color: #fff;
     z-index: 11;
+    outline: none;
 }
 .gallery-wrapper .gallery .next {
     position: absolute;
@@ -93,6 +95,7 @@
     font-size: 44px;
     color: #fff;
     z-index: 11;
+    outline: none;
 }
 .gallery-wrapper .gallery-thumbs .prev {
     position: absolute;
@@ -105,6 +108,7 @@
     cursor: pointer;
     font-size: 24px;
     color: #fff;
+    outline: none;
 }
 .gallery-wrapper .gallery-thumbs .next {
     position: absolute;
@@ -117,6 +121,7 @@
     cursor: pointer;
     font-size: 24px;
     color: #fff;
+    outline: none;
 }
 .gallery-wrapper .gallery-thumbs .photolist-wrapper {
     position: relative;
