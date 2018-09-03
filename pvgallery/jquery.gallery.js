@@ -13,6 +13,7 @@
 
         this.$gallery = this.$wrapper.find('.gallery');
         this.$videoWrapper = this.$wrapper.find('.video-wrapper');
+        this.$videoIcon = $('<i class="icon-video"></i>');
         this.$prevBtn = this.$gallery.find('.prev');
         this.$nextBtn = this.$gallery.find('.next');
 
@@ -97,11 +98,15 @@
             _this.$photoList.find('li').each(function(i) {
                 var $img = $(this).find('img');
                 var type = $(this).attr('data-type');
+                var videoSrc = $(this).attr('data-video-src');
                 if (type === 'video') {
-                    $(this).find('.icon-video').show();
+                    $(this).append(_this.$videoIcon);
                 }
                 var src = $img.attr('data-src');
                 if (i === 0) {
+                    if (type === 'video') {
+                        _this.$gallery.append(_this.$videoIcon);
+                    }
                     _this.tmbPicSelected();
                     _this.$realImg.attr('src', src);
                 }
